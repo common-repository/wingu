@@ -1,0 +1,45 @@
+{
+  "name": "wingu/wingu-wordpress-plugin",
+  "type": "wordpress-plugin",
+  "description": "Wingu plugin allows you to seamlessly link content you have created on WordPress Platform to Triggers you manage through Wingu Proximity Platform.",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Wingu",
+      "email": "hilfe@wingu.de"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "discard-changes": true,
+    "preferred-install": "dist"
+  },
+  "require": {
+    "php": "^7.1",
+    "ext-json": "*",
+
+    "composer/installers": "^1.5",
+    "wingu/wingu-sdk-php": "^0.1",
+    "guzzlehttp/psr7": "^1.4",
+    "php-http/curl-client": "^1.7",
+
+    "phpdocumentor/reflection-docblock": "^3.0",
+    "symfony/serializer": "^3.4",
+    "symfony/property-access": "^4.1",
+    "symfony/property-info": "^3.4",
+	"symfony/inflector": "^3.4"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wingu\\Plugin\\Wordpress\\": [
+        "admin",
+        "includes",
+        "public"
+      ]
+    }
+  }
+}
